@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>ecoOmetepe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "medium-zoom": "https://esm.sh/medium-zoom@1.0.6"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app" class="device" role="application" aria-label="ecoOmetepe app">
+    <!-- Top area -->
+    <header class="header">
+      <div class="header-left">
+        <button id="btnSearch" class="icon-btn" aria-label="Buscar">🔍</button>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:2px;flex:1;align-items:center">
+        <div class="title"><!-- app icon is injected via JS; fallback emoji kept for very early render -->🌿 Ometepe Palehuia <span class="leaf" aria-hidden="true">🌿</span></div>
+        <div class="subtitle">Guardianes de Altagracia</div>
+      </div>
+
+      <div class="header-right">
+        <button id="btnTheme" class="icon-btn" aria-label="Cambiar tema">🌗</button>
+        <button id="btnProfile" class="icon-btn" aria-label="Perfil">👤</button>
+      </div>
+
+      <!-- Search input overlay (hidden until activated) -->
+      <div id="searchWrap" class="search-wrap" aria-hidden="true">
+        <input id="searchInput" type="search" placeholder="Buscar lugares o consejos..." aria-label="Buscar" />
+        <button id="closeSearch" class="icon-btn" aria-label="Cerrar búsqueda">✕</button>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main id="main" class="main">
+      <!-- Home Screen -->
+      <section id="home" class="screen active">
+        <div class="hero">
+          <div class="carousel-wrap" aria-hidden="false">
+            <div class="carousel" id="carousel">
+              <div class="slide" data-title="Volcán Maderas" data-id="maderas">
+                <img src="/df39d81bd444bfa01311465181c72f94.jpg" alt="Volcán Maderas" />
+                <div class="caption">Volcán Maderas</div>
+              </div>
+              <div class="slide" data-title="Playa Primavera" data-id="primavera">
+                <img src="/Sin título.jpg" alt="Playa Primavera" />
+                <div class="caption">Playa Primavera</div>
+              </div>
+              <div class="slide" data-title="Playa Santa Cruz" data-id="playa_santa_cruz">
+                <img src="/sto domingo.jpg" alt="Playa Santa Cruz" />
+                <div class="caption">Playa Santa Cruz</div>
+              </div>
+            </div>
+
+            <div class="carousel-indicators" id="indicators"></div>
+          </div>
+
+          <div class="hero-actions" role="group" aria-label="Acciones principales">
+            <div style="flex:1"></div>
+            <button class="action-btn" id="btnReport" data-target="report" style="max-width:220px">
+              <div class="a-icon">📸</div>
+              <div class="a-label">Reportar problema</div>
+            </button>
+            <div style="flex:1"></div>
+          </div>
+
+          <!-- Introductory environmental tips added to home -->
+          <div class="info-card" style="margin-top:10px">
+            <h3>Por qué y cómo cuidar Ometepe</h3>
+            <ul style="margin:8px 0 0;padding-left:18px;line-height:1.4;color:var(--text,#123)">
+              <li><strong>Reciclar:</strong> Reduce la contaminación, evita que residuos lleguen al lago y fomenta la economía local.</li>
+              <li><strong>No tirar basura:</strong> Protege la fauna y la calidad del agua; la basura provoca daños a animales y ecosistemas.</li>
+              <li><strong>Proteger playas, ríos y bosques:</strong> Evita verter químicos, respeta senderos y participa en limpiezas para mantener hábitats sanos.</li>
+              <li><strong>Turismo ecológico:</strong> Apoya guías y emprendimientos locales; el turismo responsable genera recursos para conservación.</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- Consejos Screen -->
+      <section id="tips" class="screen">
+        <div class="info-card" style="margin-bottom:10px">
+          <h3>Consejos de los guardianes</h3>
+          <p>Personajes amigables que enseñan a cuidar la isla. Toca cualquiera para leer su consejo.</p>
+        </div>
+        <div class="cards" id="tipsCards" aria-label="Consejos por personaje" style="margin-top:8px">
+          <!-- Animal tip cards injected by JS -->
+        </div>
+      </section>
+
+      <!-- Places Screen -->
+      <section id="places" class="screen">
+        <div class="map-sim" id="mapSim" aria-label="Mapa ecológico de Altagracia">
+          <!-- Map pins injected by JS -->
+        </div>
+        <div class="cards" id="cards" aria-label="Lista de lugares en Altagracia">
+          <!-- Cards injected by JS -->
+        </div>
+      </section>
+
+      <!-- Info Screen -->
+      <section id="info" class="screen">
+        <div class="info-card">
+          <h3>Sobre Ometepe</h3>
+          <p>Ometepe es una isla formada por dos volcanes (Concepción y Maderas) ubicada en el Lago Cocibolca. Su biodiversidad y ecosistemas lacustres y volcánicos la convierten en un área de gran importancia ecológica.</p>
+
+          <h4>Importancia ecológica</h4>
+          <p>La isla alberga bosques, humedales y especies endémicas; conservar estos hábitats mantiene la biodiversidad y los medios de vida locales.</p>
+
+          <h4>Educación ambiental</h4>
+          <ul class="educ-list">
+            <li><strong>Reciclar:</strong> Reduce la contaminación y apoya la economía circular local.</li>
+            <li><strong>No tirar basura:</strong> Protege fauna y evita obstrucciones en ecosistemas acuáticos.</li>
+            <li><strong>Cuidar playas y ríos:</strong> Mantiene hábitats para especies marinas y aves.</li>
+            <li><strong>Turismo ecológico:</strong> Genera ingresos sostenibles y incentiva la conservación.</li>
+          </ul>
+
+          <h4>Consejos rápidos</h4>
+          <p>Apoya iniciativas locales, respeta señalizaciones, lleva tus residuos fuera de áreas naturales y usa productos biodegradables.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav" role="navigation" aria-label="Navegación principal">
+      <button class="nav-btn active" data-target="home" aria-label="Inicio">
+        <span class="icon">🏠</span>
+        <span class="label">Inicio</span>
+      </button>
+      <button class="nav-btn" data-target="places" aria-label="Mapa ecológico">
+        <span class="icon">🗺️</span>
+        <span class="label">Mapa</span>
+      </button>
+      <button class="nav-btn" data-target="tips" aria-label="Consejos">
+        <span class="icon">🌿</span>
+        <span class="label">Consejos</span>
+      </button>
+      <button class="nav-btn" data-target="info" aria-label="Información">
+        <span class="icon">📖</span>
+        <span class="label">Info</span>
+      </button>
+    </nav>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="modal" aria-hidden="true">
+      <div class="modal-sheet">
+        <button id="closeModal" class="close" aria-label="Cerrar">✕</button>
+        <div class="detail-image-wrap">
+          <img id="detailImg" src="" alt="" />
+        </div>
+        <div class="detail-body">
+          <h3 id="detailTitle"></h3>
+          <p id="detailText"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Modal -->
+    <div id="reportModal" class="modal" aria-hidden="true">
+      <div class="modal-sheet">
+        <button id="closeReport" class="close" aria-label="Cerrar">✕</button>
+        <div class="detail-body">
+          <h3>Reportar problema ambiental</h3>
+          <p style="margin-top:6px;font-size:13px;color:var(--muted)">Describe el problema y, si puedes, adjunta una foto.</p>
+          <form id="reportForm" style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+            <label style="font-size:13px;color:#123">Categoría</label>
+            <select id="reportCategory" required>
+              <option value="basura">Basura</option>
+              <option value="incendio">Incendio / Quema</option>
+              <option value="tala">Tala ilegal</option>
+              <option value="contaminacion">Contaminación del agua</option>
+              <option value="otro">Otro</option>
+            </select>
+
+            <label style="font-size:13px;color:#123">Descripción</label>
+            <textarea id="reportDesc" rows="4" placeholder="Descripción breve..." required style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)"></textarea>
+
+            <label style="font-size:13px;color:#123">Foto (opcional)</label>
+            <input id="reportPhoto" type="file" accept="image/*">
+
+            <label style="font-size:13px;color:#123">Ubicación (ej: Moyogalpa, playa X)</label>
+            <input id="reportLocation" type="text" placeholder="Ubicación aproximada" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button id="submitReport" type="button" class="action-btn" style="flex:1">Enviar reporte</button>
+              <button id="cancelReport" type="button" class="action-btn" style="flex:1;background:#fff">Cancelar</button>
+            </div>
+
+            <div id="reportStatus" style="font-size:13px;color:var(--muted);margin-top:6px;display:none"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
