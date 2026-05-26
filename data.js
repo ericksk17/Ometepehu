@@ -4,7 +4,7 @@ export const places = [
     id: "recycling_altagracia",
     title: "Puntos de reciclaje - Altagracia",
     gallery: [
-      "/punooo.jpg"
+      "punooo.jpg"
     ],
     type: "recycling",
     text: "Puntos de reciclaje comunitarios en Altagracia: separa plásticos, vidrio y papel; reciclar protege al lago y apoya iniciativas locales."
@@ -13,7 +13,7 @@ export const places = [
     id: "concepcion_zone",
     title: "Zona protegida - Volcán Maderas (Altagracia)",
     gallery: [
-      "/df39d81bd444bfa01311465181c72f94.jpg",
+      "df39d81bd444bfa01311465181c72f94.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/1/1e/Volcano_trail.jpg"
     ],
     type: "protected",
@@ -23,7 +23,7 @@ export const places = [
     id: "polluted_shore",
     title: "Orilla con acumulación de basura",
     gallery: [
-      "/basura.jpg",
+      "basura.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/6/66/Lago_de_Nicaragua.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/4/4a/Litter_on_shore.jpg"
     ],
@@ -34,7 +34,7 @@ export const places = [
     id: "eco_center",
     title: "Centro ecológico - Senderos y pozas",
     gallery: [
-      "/sendero.jpg",
+      "sendero.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/2/2d/Ojo_de_Agua_Ometepe.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/8/88/Nature_landscape.jpg"
     ],
@@ -47,7 +47,7 @@ export const places = [
     id: "playa_paso_real",
     title: "Playa Paso Real — Chispa el Perrito",
     gallery: [
-      "/paso real.jpg"
+      "pasoreal.jpg"
     ],
     type: "eco_tour",
     text: "Playa Paso Real: área recreativa; mantén la playa limpia para que Chispa y otros animales disfruten."
@@ -56,7 +56,7 @@ export const places = [
     id: "playa_san_miguel",
     title: "Playa San Miguel — Goldi el Pez",
     gallery: [
-      "/playa san miguel.jpg",
+      "playasanmiguel.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/3/33/Tropical_fish.jpg"
     ],
     type: "eco_tour",
@@ -66,7 +66,7 @@ export const places = [
     id: "playa_taguizapa",
     title: "Playa Tagüizapa — Rinho el Garrobo",
     gallery: [
-      "/taguizapa.jpg"
+      "taguizapa.jpg"
     ],
     type: "eco_tour",
     text: "Playa Tagüizapa: hábitat costero cercano a zonas rocosas, hogar de Rinho; respeta la flora y fauna."
@@ -75,7 +75,7 @@ export const places = [
     id: "playa_santa_cruz",
     title: "Playa Santa Cruz — Luna la Mariposa",
     gallery: [
-      "/sto domingo.jpg",
+      "stodomingo.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/7/7f/Monarch_In_May.jpg"
     ],
     type: "eco_tour",
@@ -85,7 +85,7 @@ export const places = [
     id: "playa_santo_domingo",
     title: "Playa Santo Domingo — Tito la Tortuga",
     gallery: [
-      "/santo domingo.jpg",
+      "santodomingo.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/6/6e/Green_sea_turtle_grazing.jpg"
     ],
     type: "eco_tour",
@@ -95,7 +95,7 @@ export const places = [
     id: "playa_mango",
     title: "Playa Mango — Pepe el Loro",
     gallery: [
-      "/mango.jpeg",
+      "mango.jpeg",
       "https://upload.wikimedia.org/wikipedia/commons/3/32/Ara_macao_-Costa_Rica_-two-8a.jpg"
     ],
     type: "eco_tour",
@@ -105,7 +105,7 @@ export const places = [
     id: "rio_buen_suceso",
     title: "Río Buen Suceso — Nico el Mono",
     gallery: [
-      "/riooo.jpg",
+      "riooo.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/4/47/White-faced_capuchin.jpg"
     ],
     type: "protected",
@@ -115,7 +115,7 @@ export const places = [
     id: "reserva_pena_inculta",
     title: "Reserva Natural Peña Inculta — Perla la Urraca",
     gallery: [
-      "/peña.jpg",
+      "peña.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/2/20/European_magpie_Pica_pica.jpg"
     ],
     type: "protected",
